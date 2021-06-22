@@ -45,6 +45,11 @@
     *   Fix focusability of `StyledPlayerView` and `StyledPlayerControlView`
         popup menus on API levels prior to 26
         ([#9061](https://github.com/google/ExoPlayer/issues/9061)).
+    *   Fix progress bar flickering immediately after the user seeks
+        ([#9049](https://github.com/google/ExoPlayer/pull/9049)).
+    *   Fix `StyledPlayerView` and `StyledPlayerControlView` popup menu items
+        not expanding to occupy the full width of the popup
+        ([#9086](https://github.com/google/ExoPlayer/issues/9086)).
 *   Video:
     *   Fix `IncorrectContextUseViolation` strict mode warning on Android 11
         ([#8246](https://github.com/google/ExoPlayer/pull/8246)).
@@ -63,6 +68,9 @@
         ([#4083](https://github.com/google/ExoPlayer/issues/4083)). Such content
         is malformed and should be re-encoded.
 *   HLS:
+    *   Fix issue where playback of a live event could become stuck rather than
+        transitioning to `STATE_ENDED` when the event ends
+        ([#9067](https://github.com/google/ExoPlayer/issues/9067)).
     *   Fix issue where a new initialization segment, as specified by an
         `EXT-X-MAP` tag in a media playlist, would not be loaded when
         encountered during playback
