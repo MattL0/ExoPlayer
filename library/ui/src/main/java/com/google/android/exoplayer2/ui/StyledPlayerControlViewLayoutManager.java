@@ -627,6 +627,12 @@ import java.util.List;
     for (View v : shownButtons) {
       v.setVisibility(isMinimalMode && shouldHideInMinimalMode(v) ? View.INVISIBLE : View.VISIBLE);
     }
+
+    View centerView = styledPlayerControlView.findViewById(R.id.exo_controls_background);
+    if (centerView instanceof ViewGroup && ((ViewGroup) centerView).getChildCount() > 0) {
+      View titleView = ((ViewGroup) centerView).getChildAt(0);
+      titleView.setVisibility(isMinimalMode ? View.INVISIBLE : View.VISIBLE);
+    }
   }
 
   private boolean shouldHideInMinimalMode(View button) {
