@@ -384,8 +384,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
       if (codecProfileAndLevel != null) {
         int profile = codecProfileAndLevel.first;
         if (profile == CodecProfileLevel.DolbyVisionProfileDvheDtr
-            || profile == CodecProfileLevel.DolbyVisionProfileDvheSt
-            || profile == CodecProfileLevel.DolbyVisionProfileDvheDtb) {
+          || profile == CodecProfileLevel.DolbyVisionProfileDvheSt) {
           decoderInfos.addAll(
               mediaCodecSelector.getDecoderInfos(
                   MimeTypes.VIDEO_H265, requiresSecureDecoder, requiresTunnelingDecoder));
